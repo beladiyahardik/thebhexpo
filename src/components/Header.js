@@ -1,3 +1,4 @@
+import { HomeOutlined } from "@ant-design/icons/lib/icons";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -9,7 +10,7 @@ const Header = () => {
         <ul className="links d-flex space-around w-100">
           <li>
             <Link to="" className="text-white">
-              Home{" "}
+              Home
             </Link>
           </li>
           <li>
@@ -25,6 +26,11 @@ const Header = () => {
           <li>
             <Link to="" className="text-white">
               Privacy Policy
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="text-white">
+              Login
             </Link>
           </li>
         </ul>
