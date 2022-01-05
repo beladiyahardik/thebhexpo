@@ -2,11 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.mainScreen{
-    height: 100vh;
+.navbar{
+    height:10vh;
     width: 100%;
-    background-color: #000;
-    color: white;
+}
+
+.links{
+    list-style: none;
+    margin: 0;
 }
