@@ -5,7 +5,7 @@ import Authentication from "./config/auth/Authentication";
 import Home from "./pages/home/Home";
 import Index from "./pages/Index";
 import Login from "./pages/login/Login";
-import Profile from "./pages/Profile";
+import Profile from "./pages/Profile/Profile";
 import Signup from "./pages/signup/Signup";
 
 function App() {
