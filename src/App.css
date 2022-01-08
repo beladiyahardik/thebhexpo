@@ -1,16 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.navbar{
-    height:10vh;
-    width: 100%;
+body::-webkit-scrollbar {
+  width: 0px;
 }
 
-.links{
-    list-style: none;
-    margin: 0;
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.navbar {
+  height: 10vh;
+  width: 100%;
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+}
+
+.signupBlock{
+  row-gap: 15px;
 }

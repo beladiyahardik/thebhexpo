@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Input, Button, Checkbox, Switch } from "antd";
+import { LoginAction } from "../../redux/actions/loginAction";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+
 const Login = () => {
+
+  const [userData, setUserData] = useState()
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const loginUser = useSelector(state => state.loggedUser.user)
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value })
+  }
+
+  const userLogin = () => {
+    dispatch(LoginAction(userData))
+  }
+
+  useEffect(() => {
+    if(loginUser.userFound) {
+      navigate('/home')
+    }
+  }, [loginUser])
+
   return (
     <div>
       <div className="login d-flex x-center h-100vh y-center w-100">
@@ -10,6 +34,7 @@ const Login = () => {
           wrapperCol={{ span: 32 }}
           initialValues={{ remember: true }}
           autoComplete="off">
+
           <Form.Item
             label="Username"
             name="username"
@@ -18,8 +43,10 @@ const Login = () => {
                 required: true,
                 message: "Please input your username!",
               },
-            ]}>
-            <Input />
+            ]}
+          >
+
+            <Input name="username" onChange={(e) => handleChange(e)} />
           </Form.Item>
 
           <Form.Item
@@ -31,7 +58,7 @@ const Login = () => {
                 message: "Please input your password!",
               },
             ]}>
-            <Input.Password />
+            <Input.Password name="password" onChange={(e) => handleChange(e)}/>
           </Form.Item>
 
           <Form.Item
@@ -49,9 +76,10 @@ const Login = () => {
               offset: 8,
               span: 16,
             }}>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" onClick={userLogin}>
               Login
             </Button>
+            <Link to="/signup">Signup</Link>
           </Form.Item>
         </Form>
       </div>
