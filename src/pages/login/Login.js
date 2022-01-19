@@ -3,27 +3,31 @@ import { Form, Input, Button, Checkbox, Switch } from "antd";
 import { LoginAction } from "../../redux/actions/loginAction";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import Authentication from "../../config/auth/Authentication";
 
 const Login = () => {
+  const [userData, setUserData] = useState();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const loginUser = useSelector(state => state.loggedUser.user);
 
-  const [userData, setUserData] = useState()
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const loginUser = useSelector(state => state.loggedUser.user)
-
-  const handleChange = (e) => {
-    setUserData({ ...userData, [e.target.name]: e.target.value })
-  }
+  const handleChange = e => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
 
   const userLogin = () => {
-    dispatch(LoginAction(userData))
-  }
+    dispatch(LoginAction(userData));
+  };
 
-  useEffect(() => {
-    if(loginUser.userFound) {
-      navigate('/home')
-    }
-  }, [loginUser])
+  useEffect(
+    () => {
+      console.log("loginUser", loginUser);
+      if (loginUser.userFound) {
+        Authentication.getItem("isLogin") && navigate("/home");
+      }
+    },
+    [loginUser],
+  );
 
   return (
     <div>
@@ -34,7 +38,6 @@ const Login = () => {
           wrapperCol={{ span: 32 }}
           initialValues={{ remember: true }}
           autoComplete="off">
-
           <Form.Item
             label="Username"
             name="username"
@@ -43,10 +46,8 @@ const Login = () => {
                 required: true,
                 message: "Please input your username!",
               },
-            ]}
-          >
-
-            <Input name="username" onChange={(e) => handleChange(e)} />
+            ]}>
+            <Input name="username" onChange={e => handleChange(e)} />
           </Form.Item>
 
           <Form.Item
@@ -58,7 +59,7 @@ const Login = () => {
                 message: "Please input your password!",
               },
             ]}>
-            <Input.Password name="password" onChange={(e) => handleChange(e)}/>
+            <Input.Password name="password" onChange={e => handleChange(e)} />
           </Form.Item>
 
           <Form.Item

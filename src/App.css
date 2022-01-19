@@ -27,6 +27,11 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
 }
 
-.signupBlock{
+.signupBlock {
   row-gap: 15px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
 }
