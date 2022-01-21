@@ -1,7 +1,13 @@
 import { Card } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getPostAction } from "../../redux/actions/getPostAction";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPostAction());
+  }, []);
   return (
     <div>
       <h1>Home</h1>

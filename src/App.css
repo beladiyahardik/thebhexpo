@@ -35,3 +35,12 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   bottom: 0;
 }
+
+.footerBtn {
+  width: 200px;
+}
+
+.ant-modal-body {
+  padding: 0px !important;
+  word-wrap: break-word;
+}
