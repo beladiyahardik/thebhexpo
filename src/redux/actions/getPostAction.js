@@ -29,12 +29,12 @@ export const getPostAction = () => async dispatch => {
       });
 
     dispatch({
-      type: IS_LOADING,
+      type: IS_GET_POST_LOADING,
       payload: false,
     });
 
     dispatch({
-      type: IS_GET_POST_LOADING,
+      type: IS_LOADING,
       payload: false,
     });
   } catch (err) {
@@ -44,11 +44,12 @@ export const getPostAction = () => async dispatch => {
     });
 
     dispatch({
-      type: IS_LOADING,
+      type: IS_GET_POST_LOADING,
       payload: false,
     });
+
     dispatch({
-      type: IS_GET_POST_LOADING,
+      type: IS_LOADING,
       payload: false,
     });
   }

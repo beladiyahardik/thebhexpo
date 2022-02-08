@@ -1,4 +1,9 @@
-import { IS_GET_POST_ERROR, IS_GET_POST_LOADING, IS_LOADING } from "../types";
+import {
+  GET_POST,
+  IS_GET_POST_ERROR,
+  IS_GET_POST_LOADING,
+  IS_LOADING,
+} from "../types";
 
 const getPost = {
   loading: false,
@@ -12,7 +17,7 @@ export const getPostReducer = (state = getPost, action) => {
         ...state,
         loading: true,
       };
-    case IS_GET_POST_LOADING:
+    case GET_POST:
       return {
         ...state,
         post: action.payload,

@@ -1,5 +1,9 @@
 /* #PRE-DEFINED CLASS */
 
+/* BODY */
+body{
+  background-color: #EFEFEF !important;
+}
 /* TEXT STYLE */
 .text-center {
   text-align: center !important;
@@ -7,6 +11,10 @@
 
 .text-white {
   color: white !important;
+}
+
+.text-black {
+  color: rgb(0, 0, 0) !important;
 }
 
 .font-15 {
@@ -24,7 +32,7 @@
 /* BACKGROUND STYLE */
 
 .bg-black {
-  background-color: black !important;
+  background-color: #F05454 !important;
 }
 
 p {
@@ -47,6 +55,11 @@ p {
 
 .mr-10 {
   margin-right: 10px !important;
+}
+
+/* PADDING */
+.p-10 {
+  padding: 10px !important;
 }
 
 /* HEIGHT STYLE */
@@ -116,7 +129,7 @@ p {
 }
 
 .end {
-  justify-content: end;
+  justify-content: end !important;
 }
 
 /* BORDER STYLE */

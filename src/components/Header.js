@@ -1,55 +1,16 @@
-import { HomeOutlined } from "@ant-design/icons/lib/icons";
-import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
+import {useSelector} from 'react-redux';
 import { Link, useNavigate } from "react-router-dom";
 import Authentication from "../config/auth/Authentication";
 
 const Header = () => {
   const navigate = useNavigate();
-  const logout = () => {
-    Authentication.removeItem("isLogin");
-    navigate("/");
-  };
+  const user = useSelector((state) => state.loggedUser.user)
+
   return (
     <div>
-      <div className="navbar bg-black text-white d-flex space-around y-center">
-        <div className="navbar" />
-        <ul className="links d-flex space-around w-100">
-          <li>
-            {Authentication.getItem("isLogin")
-              ? <Link to="/home" className="text-white">
-                  Home
-                </Link>
-              : <Link to="/" className="text-white">
-                  Home
-                </Link>}
-          </li>
-          <li>
-            <Link to="" className="text-white">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="" className="text-white">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="" className="text-white">
-              Privacy Policy
-            </Link>
-          </li>
-          <li>
-            {Authentication.getItem("isLogin")
-              ? <Link to="" onClick={logout} className="text-white font-20">
-                  <FontAwesomeIcon icon={faPowerOff} />
-                </Link>
-              : <Link to="/login" className="text-white">
-                  Login
-                </Link>}
-          </li>
-        </ul>
+      <div className="w-100 p-10">
+        <h1>Mixidory</h1>
       </div>
     </div>
   );

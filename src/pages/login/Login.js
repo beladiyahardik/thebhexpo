@@ -19,15 +19,12 @@ const Login = () => {
     dispatch(LoginAction(userData));
   };
 
-  useEffect(
-    () => {
-      console.log("loginUser", loginUser);
+  useEffect(() => {
       if (loginUser.userFound) {
-        Authentication.getItem("isLogin") && navigate("/home");
+        // Authentication.getItem("isLogin")
+        navigate("/home");
       }
-    },
-    [loginUser],
-  );
+    },[loginUser]);
 
   return (
     <div>

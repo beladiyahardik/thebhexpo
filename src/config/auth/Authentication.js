@@ -1,15 +1,15 @@
 class Authentication {
 
     static setItem = (key, data) => {
-        localStorage.setItem(key, data)
+        sessionStorage.setItem(key, data)
     }
 
     static getItem = (key) => {
-        return localStorage.getItem(key)
+        return sessionStorage.getItem(key)
     }
 
     static removeItem = (key) => {
-        localStorage.removeItem(key)
+        sessionStorage.removeItem(key)
     }
 }
 

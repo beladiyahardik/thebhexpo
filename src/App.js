@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import {
   BrowserRouter,
   Route,
@@ -16,19 +17,21 @@ import Profile from "./pages/Profile/Profile";
 import Signup from "./pages/signup/Signup";
 
 function App() {
+  const user = useSelector((state) => state.loggedUser.user)
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        {Authentication.getItem("isLogin")
-          ? <Route path="/home" element={<Home />} />
-          : <Route path="/" element={<Index />} />}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/:username" element={<Profile />} />
-        <Route path="/error" element={<h1>Error</h1>} />
-      </Routes>
-      {Authentication.getItem("isLogin") && <Footer />}
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/u/:username" element={<Profile />} />
+            <Route path="/error" element={<h1>Error</h1>} />
+          </Routes> 
+      <Footer />
+  
+        
     </BrowserRouter>
   );
 }
