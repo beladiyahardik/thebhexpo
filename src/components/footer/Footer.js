@@ -1,13 +1,14 @@
 import { Modal, Input } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import HomeIcon from '../../assets/icons/home.png'
 import post from '../../assets/icons/upload.png'
 import pen from '../../assets/icons/pen.png'
 import logoutIcon from '../../assets/icons/logout.png'
 import defaultImage from '../../assets/images/profile/parrot.jpg'
 import Authentication from "../../config/auth/Authentication";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -18,11 +19,7 @@ const Footer = () => {
   const showModal = () => {
     setIsModalVisible(true);
   };
-
-  useEffect(() => {
-    console.log("user", user);
-  }, [user])
-
+  
   const handleOk = () => {
     setIsModalVisible(false);
   };
@@ -50,7 +47,7 @@ const Footer = () => {
           <div><img src={defaultImage} className='w-30 round' /></div>
         </Link>
 
-        <Link to="" onClick={logout}><img src={logoutIcon} className='w-30' /></Link>
+        <div onClick={logout}><img src={logoutIcon} className='w-30' /></div>
       </div>
       <Modal
         title="Create post"

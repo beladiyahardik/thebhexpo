@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Button, Checkbox, Switch } from "antd";
+import { Form, Input, Button, Checkbox } from "antd";
 import { LoginAction } from "../../redux/actions/loginAction";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -20,11 +20,10 @@ const Login = () => {
   };
 
   useEffect(() => {
-      if (loginUser.userFound) {
-        // Authentication.getItem("isLogin")
-        navigate("/home");
-      }
-    },[loginUser]);
+    if (loginUser.userFound && Authentication.getItem("isLogin")) {
+      navigate("/home");
+    }
+  }, [loginUser]);
 
   return (
     <div>
