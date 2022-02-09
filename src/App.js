@@ -4,11 +4,9 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  Rediret,
-  Navigate,
 } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
 import Authentication from "./config/auth/Authentication";
 import Home from "./pages/home/Home";
 import Index from "./pages/Index";
@@ -21,20 +19,20 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/u/:username" element={<Profile />} />
-            <Route path="/error" element={<h1>Error</h1>} />
-          </Routes>
-          {
-            user.userFound && 
-      <Footer />
-          } 
-  
-        
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/u/:username" element={<Profile />} />
+        <Route path="/error" element={<h1>Error</h1>} />
+      </Routes>
+      {
+        user.userFound &&
+        <Footer />
+      }
+
+
     </BrowserRouter>
   );
 }

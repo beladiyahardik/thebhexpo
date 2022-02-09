@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {useSelector} from 'react-redux';
 import { Link, useNavigate } from "react-router-dom";
-import Authentication from "../config/auth/Authentication";
+import Authentication from "../../config/auth/Authentication";
 
 const Header = () => {
   const navigate = useNavigate();
