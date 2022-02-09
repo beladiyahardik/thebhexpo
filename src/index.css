@@ -1,5 +1,15 @@
 /* #PRE-DEFINED CLASS */
 
+/* CONTAINER */
+.container{
+  max-width: 700px !important;
+  padding: 0 15px !important;
+  margin: 0 auto !important;
+}
+
+.bg-sky{
+  background-color: #CAF0F8 !important;
+}
 /* BODY */
 body{
   background-color: #EFEFEF !important;
@@ -15,6 +25,10 @@ body{
 
 .text-black {
   color: rgb(0, 0, 0) !important;
+}
+
+.font-10 {
+  font-size: 10px !important;
 }
 
 .font-15 {
@@ -47,6 +61,14 @@ p {
 
 .ml-10 {
   margin-left: 10px !important;
+}
+
+.ml-50 {
+  margin-left: 50px !important;
+}
+
+.ml-100 {
+  margin-left: 100px !important;
 }
 
 .mr-5 {
@@ -102,6 +124,10 @@ p {
   width: 60px !important;
 }
 
+.w-200 {
+  width: 200px !important;
+}
+
 /* ALIGN STYLE */
 
 .d-flex {
@@ -130,6 +156,18 @@ p {
 
 .end {
   justify-content: end !important;
+}
+
+.start {
+  justify-content: start !important;
+}
+
+.left {
+  justify-content: left !important;
+}
+
+.right {
+  justify-content: right !important;
 }
 
 /* BORDER STYLE */

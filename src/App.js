@@ -28,8 +28,11 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/u/:username" element={<Profile />} />
             <Route path="/error" element={<h1>Error</h1>} />
-          </Routes> 
+          </Routes>
+          {
+            user.userFound && 
       <Footer />
+          } 
   
         
     </BrowserRouter>

@@ -9,6 +9,7 @@ import HomeIcon from '../assets/icons/home.png'
 import post from '../assets/icons/upload.png'
 import pen from '../assets/icons/pen.png'
 import logoutIcon from '../assets/icons/logout.png'
+import defaultImage from '../assets/images/profile/parrot.jpg'
 
 const Footer = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -51,7 +52,9 @@ const Footer = () => {
       <img src={post} className='w-30' />
       <img src={pen} className='w-30' onClick={showModal}/>
         
-        <Link to="" onClick={profile} className="font-20 text-black"><FontAwesomeIcon icon={faUserCircle} /></Link>
+        <Link to={`u/${user.username}`} onClick={profile} className="font-20 text-black">
+          <div><img src={defaultImage} className='w-30 round' /></div>
+          </Link>
 
         <Link to="" onClick={logout}><img src={logoutIcon} className='w-30' /></Link>
       </div>
