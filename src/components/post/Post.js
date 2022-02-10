@@ -4,10 +4,11 @@ import React from "react";
 
 const Post = ({username, content}) => {
   return(
-      <div className="w-100 d-flex x-center">
-      <div className="post p-10">
-      <div className="head"> <FontAwesomeIcon icon={faUserAlt} /> {username}</div>
-      <div>{content}</div>
+    
+      <div className="w-100">
+      <div className="post p-10 bg-white">
+      <div className="head font-15"> <FontAwesomeIcon icon={faUserAlt} /> <span className="ml-5">{username}</span></div>
+      <div className="font-20 p-10">{content}</div>
       </div>
       </div>
   );

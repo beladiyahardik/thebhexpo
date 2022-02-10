@@ -10,6 +10,10 @@
 .bg-sky{
   background-color: #CAF0F8 !important;
 }
+
+.bg-white{
+  background-color: white !important;
+}
 /* BODY */
 body{
   background-color: #EFEFEF !important;

@@ -52,12 +52,9 @@ body::-webkit-scrollbar-thumb {
 .post {
   width: 500px;
   border: 1px solid rgb(117, 117, 117);
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
-.post .head{
-  border-bottom: 1px solid black;
-}
 
 .ant-modal-body {
   padding: 0px !important;

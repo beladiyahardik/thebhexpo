@@ -11,4 +11,5 @@ export const endPoint = {
   login: "login",
   signup: "signup",
   getPost: "getpost",
+  newpost:"newpost",
 };
