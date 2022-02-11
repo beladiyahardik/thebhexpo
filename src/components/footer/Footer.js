@@ -53,7 +53,7 @@ const Footer = () => {
 
   return (
     <div className="w-100 d-flex y-center x-center footer">
-      <div className="font-25 footerBtn d-flex x-center y-center space-around">
+      <div className="font-26 footerBtn d-flex x-center y-center space-around">
 
         <Link to="/home" className="font-20 text-black">
           <img src={HomeIcon} className='w-30' />
@@ -72,7 +72,7 @@ const Footer = () => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}>
-        <TextArea rows={5} value={postContent} onChange={(e)=> typePost(e)} />
+        <TextArea rows={5}  onChange={(e)=> typePost(e)} />
       </Modal>
     </div>
   );

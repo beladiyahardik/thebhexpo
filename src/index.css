@@ -1,3 +1,11 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 /* #PRE-DEFINED CLASS */
 
 /* CONTAINER */
@@ -15,9 +23,9 @@
   background-color: white !important;
 }
 /* BODY */
-body{
+/* body{
   background-color: #EFEFEF !important;
-}
+} */
 /* TEXT STYLE */
 .text-center {
   text-align: center !important;
@@ -35,16 +43,16 @@ body{
   font-size: 10px !important;
 }
 
-.font-15 {
-  font-size: 15px !important;
+.font-16 {
+  font-size: 16px !important;
 }
 
 .font-20 {
   font-size: 20px !important;
 }
 
-.font-25 {
-  font-size: 25px !important;
+.font-26 {
+  font-size: 26px !important;
 }
 
 /* BACKGROUND STYLE */

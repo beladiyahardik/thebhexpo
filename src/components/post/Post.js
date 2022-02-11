@@ -7,7 +7,7 @@ const Post = ({username, content}) => {
     
       <div className="w-100">
       <div className="post p-10 bg-white">
-      <div className="head font-15"> <FontAwesomeIcon icon={faUserAlt} /> <span className="ml-5">{username}</span></div>
+      <div className="head font-16"> <FontAwesomeIcon icon={faUserAlt} /> <span className="ml-5">{username}</span></div>
       <div className="font-20 p-10">{content}</div>
       </div>
       </div>
