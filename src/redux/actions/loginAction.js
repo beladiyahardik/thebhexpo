@@ -32,6 +32,7 @@ export const LoginAction = userData => async dispatch => {
         });
         res.data.userFound &&
           Authentication.setItem("isLogin", res.data.userFound);
+          Authentication.setItem("user", res.data.username);
       });
 
     dispatch({

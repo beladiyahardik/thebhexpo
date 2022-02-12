@@ -11,6 +11,7 @@ class Authentication {
     static removeItem = (key) => {
         localStorage.removeItem(key)
     }
+    
 }
 
 export default Authentication

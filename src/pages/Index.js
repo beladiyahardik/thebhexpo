@@ -21,7 +21,7 @@ const Pages = () => {
   }, [location])
 
   useEffect(() => {
-    if (!Authentication.getItem('isLogin')) {
+    if (!Authentication.getItem('isLogin') && window.location.pathname !== '/signup') {
       navigate("/")
     }
   }, [])

@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   const loginUser = useSelector(state => state.loggedUser.user);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
@@ -84,13 +84,13 @@ const Login = () => {
             </Form.Item>
           </Form> */}
           <div className="shadow-2xl p-24 rounded-lg">
-            <form>
+            {/* <form> */}
               <label htmlFor="" className="w-full ml-3 text-lg font-serif">Username</label>
-              <input type="text" placeholder="Enter Your Username" className="mt-1 mb-5 w-full shadow-md font-serif outline-0 px-4 py-4 rounded-xl" />
+              <input type="text" name="username" onChange={e => handleChange(e)} placeholder="Enter Your Username" className="mt-1 mb-5 w-full shadow-md font-serif outline-0 px-4 py-4 rounded-xl" />
               <label htmlFor="" className="w-full ml-3 text-lg font-serif">Password</label>
-              <input type="password" placeholder="Enter Your Password" className="mt-1 w-full mb-5 shadow-md font-serif px-4 py-4 outline-0 rounded-xl" />
-              <button className="rounded-xl bg-buttoncolor text-white font-serif  px-6 py-3 ">Login</button>
-            </form>
+              <input type="password" name="password" onChange={e => handleChange(e)} placeholder="Enter Your Password" className="mt-1 w-full mb-5 shadow-md font-serif px-4 py-4 outline-0 rounded-xl" />
+              <button className="rounded-xl bg-buttoncolor text-white font-serif  px-6 py-3 " onClick={userLogin} >Login</button>
+            {/* </form> */}
           </div>
         </div>
 

@@ -53,6 +53,7 @@ body::-webkit-scrollbar-thumb {
   width: 500px;
   border: 1px solid rgb(117, 117, 117);
   border-radius: 2px;
+  margin: 5px;
 }
 
 

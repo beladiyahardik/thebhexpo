@@ -13,13 +13,8 @@ const Signup = () => {
     }
 
     const setBirthdate = (e) => {
-        console.log("e", e._d);
         setUserData({ ...userData, birthday: e._d })
     }
-
-    useEffect(() => {
-        console.log("userData", userData);
-    }, [userData])
 
     const signup = () => {
         dispatch(signupAction(userData))
