@@ -32,65 +32,13 @@ const Login = () => {
           <img src="./assets/img/login-side-img-6.jpg" alt="" width="100%" height="100%" />
         </div>
         <div className="w-45 p-24">
-          {/* <Form
-            name="basic"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 32 }}
-            initialValues={{ remember: true }}
-            autoComplete="off">
-            <Form.Item
-              label="Username"
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your username!",
-                },
-              ]}>
-              <Input name="username" onChange={e => handleChange(e)} />
-            </Form.Item>
-
-            <Form.Item
-              label="Password"
-              name="password"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your password!",
-                },
-              ]}>
-              <Input.Password name="password" onChange={e => handleChange(e)} />
-            </Form.Item>
-
-            <Form.Item
-              name="remember"
-              valuePropName="checked"
-              wrapperCol={{
-                offset: 8,
-                span: 16,
-              }}>
-              <Checkbox >Remember me</Checkbox>
-            </Form.Item>
-
-            <Form.Item
-              wrapperCol={{
-                offset: 8,
-                span: 16,
-              }}>
-              <Button type="primary" htmlType="submit" onClick={userLogin}>
-                Login
-              </Button>
-              <Link to="/signup" >Signup</Link>
-            </Form.Item>
-          </Form> */}
           <div className="shadow-2xl p-24 rounded-lg">
-            {/* <form> */}
               <label htmlFor="" className="w-full ml-3 text-lg font-serif">Username</label>
-              <input type="text" name="username" onChange={e => handleChange(e)} placeholder="Enter Your Username" className="mt-1 mb-5 w-full shadow-md font-serif outline-0 px-4 py-4 rounded-xl" />
+              <input type="text" name="username" onChange={e => handleChange(e)} placeholder="Username" className="mt-1 mb-5 w-full shadow-md font-serif outline-0 px-4 py-4 rounded-sm" />
               <label htmlFor="" className="w-full ml-3 text-lg font-serif">Password</label>
-              <input type="password" name="password" onChange={e => handleChange(e)} placeholder="Enter Your Password" className="mt-1 w-full mb-5 shadow-md font-serif px-4 py-4 outline-0 rounded-xl" />
-              <button className="rounded-xl bg-buttoncolor text-white font-serif  px-6 py-3 " onClick={userLogin} >Login</button>
-            {/* </form> */}
+              <input type="password" name="password" onChange={e => handleChange(e)} placeholder="Password" className="mt-1 w-full mb-5 shadow-md font-serif px-4 py-4 outline-0 rounded-sm" />
+              <button className="rounded-sm bg-buttoncolor text-white font-serif  px-6 py-2 " onClick={userLogin} >Login</button>
+              <Link to='signup' className="px-6 py-3 ">Signup</Link>
           </div>
         </div>
 

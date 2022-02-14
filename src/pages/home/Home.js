@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="p-10 w-100 d-flex y-flex y-center">
+      <div className="p-10 w-100 d-flex y-flex y-center postContainer">
         {post ? post.map((post, index) =>
           <Post key={index} username={post.username} content={post.content} />
         ) : 

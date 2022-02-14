@@ -77,6 +77,7 @@ export const createPost = (post) => async (dispatch) => {
         type: CREATE_POST,
         payload: res.data
       })
+      dispatch(getPostAction())
     })
 
     dispatch({

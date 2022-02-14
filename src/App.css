@@ -56,6 +56,15 @@ body::-webkit-scrollbar-thumb {
   margin: 5px;
 }
 
+.postContainer{
+  height: calc(100vh - 90px);;
+  overflow: auto;
+}
+
+.postContainer::-webkit-scrollbar{
+  display: none;
+}
+
 
 .ant-modal-body {
   padding: 0px !important;
